@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Portfolio Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+    <header class="hero" id="home">
+      <nav class="nav">
+        <div class="logo">
+          <span class="logo__dot"></span>
+          <span>DevPortfolio</span>
+        </div>
+        <div class="nav__links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button id="themeToggle" class="ghost-button" type="button">Light Mode</button>
+      </nav>
+
+      <div class="hero__content">
+        <p class="eyebrow">2nd-year BSc Applied Mathematics & Computer Science (UJ)</p>
+        <h1>Software Engineer → Aspiring Machine Learning Engineer</h1>
+        <p class="lead">
+          Building data-driven products with clean engineering, thoughtful UI, and
+          practical machine learning. Passionate about side projects, certifications,
+          and real-world impact.
+        </p>
+        <div class="hero__cta">
+          <a class="primary" href="#projects">View Projects</a>
+          <a class="secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section">
+        <div class="section__heading">
+          <h2>About</h2>
+          <p>
+            I am a 2nd-year UJ student studying Applied Mathematics (APM) and Computer
+            Science (COMPSCI). I enjoy building full-stack software and experimenting with
+            machine learning, with a focus on responsible AI and clear UX.
+          </p>
+        </div>
+        <div class="about__grid">
+          <div class="panel">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Passionate about ML fundamentals and applied data science.</li>
+              <li>Active side projects exploring vision, NLP, and analytics.</li>
+              <li>Pursuing certifications to deepen engineering and ML skills.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Current Focus</h3>
+            <p>
+              Strengthening algorithms, linear algebra, probability, and software
+              design patterns while building production-ready projects.
+            </p>
+            <div class="tags">
+              <span>Applied Mathematics</span>
+              <span>Computer Science</span>
+              <span>Machine Learning</span>
+              <span>Data Engineering</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section__heading">
+          <h2>Projects</h2>
+          <p>Three flagship builds that combine engineering, design, and ML thinking.</p>
+        </div>
+        <div class="cards">
+          <article class="card project-card" data-speed="0.6">
+            <canvas class="card-canvas" data-shape="torus"></canvas>
+            <h3>Vision Workspace</h3>
+            <p>
+              A 3D productivity desk that showcases projects with interactive Three.js
+              elements.
+            </p>
+            <div class="tag-row">
+              <span>Three.js</span>
+              <span>GSAP</span>
+              <span>UI Engineering</span>
+            </div>
+            <div class="links">
+              <a href="#">GitHub</a>
+              <a href="#">Live Demo</a>
+            </div>
+          </article>
+          <article class="card project-card" data-speed="0.8">
+            <canvas class="card-canvas" data-shape="knot"></canvas>
+            <h3>ML Study Companion</h3>
+            <p>
+              A study app with adaptive quizzes for machine learning fundamentals.
+            </p>
+            <div class="tag-row">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="links">
+              <a href="#">GitHub</a>
+              <a href="#">Demo</a>
+            </div>
+          </article>
+          <article class="card project-card" data-speed="0.7">
+            <canvas class="card-canvas" data-shape="sphere"></canvas>
+            <h3>Campus Navigator</h3>
+            <p>
+              Location-aware student assistant for university services and events.
+            </p>
+            <div class="tag-row">
+              <span>React Native</span>
+              <span>Maps API</span>
+              <span>UX Research</span>
+            </div>
+            <div class="links">
+              <a href="#">GitHub</a>
+              <a href="#">Prototype</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="section__heading">
+          <h2>Certifications</h2>
+          <p>Focused learning on ML, data science, and modern software delivery.</p>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h3>Machine Learning Foundations</h3>
+            <p>Model training, evaluation, and deployment fundamentals.</p>
+          </div>
+          <div class="cert-card">
+            <h3>Data Science for Engineers</h3>
+            <p>Data pipelines, SQL, and analytics for production teams.</p>
+          </div>
+          <div class="cert-card">
+            <h3>Advanced JavaScript</h3>
+            <p>Performance, testing, and scalable front-end architecture.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section__heading">
+          <h2>Skills</h2>
+          <p>Engineering + ML toolset with a focus on shipping meaningful products.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-visual">
+            <canvas id="skillsCanvas"></canvas>
+            <p class="caption">Rotating ML + engineering stack</p>
+          </div>
+          <div class="skills-tags">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>TensorFlow</span>
+            <span>Scikit-learn</span>
+            <span>SQL</span>
+            <span>Data Visualization</span>
+            <span>System Design</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section__heading">
+          <h2>Contact</h2>
+          <p>Open to internships, collaborations, and ML-focused projects.</p>
+        </div>
+        <div class="contact-grid">
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/your-form-id"
+            method="POST"
+          >
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Message
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Tell me about your project"
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="primary">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="contact-links">
+            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Designed as a reusable 3D portfolio template for emerging ML engineers.</p>
+    </footer>
+
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
